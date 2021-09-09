@@ -9,9 +9,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
 	
-	public List <Categoria> findAllBySetorContainingIgnoreCase(String setor);
+	
 
 	public List <Categoria> findAllByGeneroContainingIgnoreCase(String genero);
+	public List <Categoria> findAllBySetorContainingIgnoreCase(String setor);
 
 
 	

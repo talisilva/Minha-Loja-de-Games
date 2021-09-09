@@ -44,6 +44,8 @@ private int quantidade;
 
 
 
+
+
 public long getId() {
 	return id;
 }
@@ -107,5 +109,9 @@ public void setCategoria(List<Categoria> categoria) {
 @OneToMany (mappedBy = "produto", cascade = CascadeType.ALL)
 @JsonIgnoreProperties("produto")
 private List<Categoria>categoria;
+
+@OneToMany (mappedBy = "produto", cascade = CascadeType.ALL)
+@JsonIgnoreProperties("produto")
+private List<Usuario>usuario;
 	
 }
